@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.list.NoteListFragment"
+    android:background="@color/colorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_note_list"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:theme="@style/ActionBarThemeOverlay"
+        app:popupTheme="@style/ActionBarThemeOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:title="@string/title"
+        tools:targetApi="m"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+    />
+<!--    <EditText-->
+<!--        android:id="@+id/edit_view_text_search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:autofillHints="@string/search"-->
+<!--        android:background="@drawable/background_search_edit_text"-->
+<!--        android:hint="@string/search"-->
+<!--        android:paddingStart="40dp"-->
+<!--        android:paddingTop="12dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:paddingEnd="32dp"-->
+<!--        android:paddingBottom="5dp"-->
+<!--        android:layout_marginBottom="40dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:inputType="textFilter" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/image_search_view"-->
+<!--        android:layout_width="24dp"-->
+<!--        android:layout_height="24dp"-->
+<!--        android:contentDescription="@string/search"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/edit_view_text_search"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/edit_view_text_search"-->
+<!--        app:layout_constraintHorizontal_bias="0.028"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/edit_view_text_search"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/edit_view_text_search"-->
+<!--        app:layout_constraintVertical_bias="0.541"-->
+<!--         app:layout_editor_absoluteX="25dp"-->
+<!--        app:layout_editor_absoluteY="25dp"-->
+<!--        android:src="@drawable/ic_search"-->
+<!--          />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notes_recycle_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_note_list"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/recycler_view_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        app:elevation="6dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintEnd_toEndOf="@+id/notes_recycle_view"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_note_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

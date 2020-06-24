@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MyLife</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">search</string>
+    <string name="add_photo">ADD PHOTO</string>
+    <string name="title">Title</string>
+    <string name="helper_text_title">you can enter title for note here</string>
+    <string name="description">Description</string>
+    <string name="helper_text_description">you can enter more about note here</string>
+    <string name="save">save</string>
+    <string name="note_id">NOTE_ID</string>
+
+    <string-array name="type_array">
+        <item>Study</item>
+        <item>Work</item>
+        <item>Day</item>
+        <item>Family</item>
+        <item>School</item>
+        <item>Religious</item>
+        <item>Private</item>
+        <item>Other</item>
+    </string-array>
+</resources>

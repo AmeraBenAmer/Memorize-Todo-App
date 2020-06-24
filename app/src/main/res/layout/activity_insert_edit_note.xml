@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.add.InsertNoteActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_180"
+            android:layout_margin="@dimen/margin_main_16"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="@dimen/card_elevation_redius_6"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_add_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:src="@drawable/ic_add"
+                app:elevation="@dimen/card_elevation_redius_6" />
+
+            <TextView
+                android:id="@+id/text_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_add"
+                android:text="@string/add_photo"
+                app:elevation="@dimen/card_elevation_redius_6" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_main_16"
+            android:layout_marginTop="@dimen/margin_top_24"
+            android:layout_marginEnd="@dimen/margin_main_16"
+            android:hint="@string/title"
+
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/card_elevation_redius_6"
+            app:boxCornerRadiusBottomStart="@dimen/card_elevation_redius_6"
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            app:helperText="@string/helper_text_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/title_note"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_layer_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_main_16"
+            android:layout_marginTop="@dimen/margin_top_24"
+            android:layout_marginEnd="@dimen/margin_main_16"
+            android:hint="@string/description"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/card_elevation_redius_6"
+            app:boxCornerRadiusBottomStart="@dimen/card_elevation_redius_6"
+            app:helperText="@string/helper_text_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_layer">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/desc_note"
+
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/categories_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_main_16"
+            android:layout_marginTop="@dimen/margin_top_24"
+            android:layout_marginEnd="@dimen/margin_main_16"
+             android:dropDownSelector="@color/colorAccent"
+            android:spinnerMode="dialog"
+            android:padding="@dimen/margin_top_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_layer_two"/>
+
+        <Button
+            android:id="@+id/btn_insert_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_main_16"
+            android:layout_marginTop="@dimen/margin_btn_50"
+            android:layout_marginEnd="@dimen/margin_main_16"
+            android:background="@color/colorAccent"
+            android:text="@string/save"
+            app:layout_constraintCircleRadius="@dimen/margin_main_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/margin_main_16"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categories_note" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    -->

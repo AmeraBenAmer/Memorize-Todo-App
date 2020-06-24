@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_main_16">16dp</dimen>
+    <dimen name="margin_top_24">24dp</dimen>
+    <dimen name="height_180">180dp</dimen>
+    <dimen name="card_elevation_redius_6">6dp</dimen>
+    <dimen name="margin_btn_50">50dp</dimen>
+</resources>
